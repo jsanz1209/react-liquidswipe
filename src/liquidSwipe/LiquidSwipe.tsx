@@ -5,7 +5,7 @@ import { LQSW_CONTAINER } from './Styled';
 
 export default function LiquidSwipe({ components, index, onChangeIndex, style }: { components: FC[], index:number, onChangeIndex: (index: number) => void, style?: any }): ReactElement {
   const sizeOfSwipe = components.length;
-  const [isActive, setActive] = useState(() => index);
+  const [isActive, setActive] = useState(index);
   const [elm, setElm] = useState<ReactElement>();
   const parentElement = useRef<HTMLDivElement>(null);
 
