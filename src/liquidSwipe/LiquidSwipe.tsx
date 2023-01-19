@@ -22,6 +22,10 @@ export default function LiquidSwipe({ components, index, onChangeIndex, style }:
         parentElement={parentElement} />
     );
   }, [isActive, components]);
+  
+   useEffect(() => {
+      setAtive(index);
+   }, [index]);
 
   if (sizeOfSwipe !== 0) {
     return (
