@@ -24,7 +24,7 @@ export default function LiquidSwipe({ components, index, onChangeIndex, style }:
   }, [isActive, components]);
   
    useEffect(() => {
-      setAtive(index);
+      setActive(index);
    }, [index]);
 
   if (sizeOfSwipe !== 0) {
