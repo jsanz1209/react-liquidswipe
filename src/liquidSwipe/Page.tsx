@@ -178,7 +178,7 @@ export default function Page({
     <div id={`pageContainer${index}`} {...bind()}>
       <LQSW_SVG
         style={{
-          zIndex: 20004,
+          zIndex: 1004,
         }}
         version="1.1"
         id="blob"
@@ -190,7 +190,7 @@ export default function Page({
       </LQSW_SVG>
       <LQSW_SVG
         style={{
-          zIndex: 20004,
+          zIndex: 1004,
         }}
         version="1.1"
         id="blob"
@@ -211,7 +211,7 @@ export default function Page({
             style={{
               clipPath: `url(#clipping${index})`,
               WebkitClipPath: `url(#clipping${index})`,
-              zIndex: 20001,
+              zIndex: 1001,
             }}
           >
             {prev}
@@ -238,7 +238,7 @@ export default function Page({
                 range: [0, 100],
                 output: [1, 0],
               }),
-              zIndex: 20005,
+              zIndex: 1005,
               transform: interpolate(
                 [
                   posL.posX.interpolate((x) => `translateX(${x}px)`),
@@ -265,7 +265,7 @@ export default function Page({
       )}
       <LQSW_PAGE
         style={{
-          zIndex: 20000,
+          zIndex: 1000,
         }}
       >
         <>{current}</>
@@ -276,7 +276,7 @@ export default function Page({
             style={{
               clipPath: `url(#clippingRight${index})`,
               WebkitClipPath: `url(#clippingRight${index})`,
-              zIndex: 20002,
+              zIndex: 1002,
             }}
           >
             {next}
@@ -303,7 +303,7 @@ export default function Page({
                 range: [width - 40, width - 140],
                 output: [1, 0],
               }),
-              zIndex: 20005,
+              zIndex: 1005,
               transform: interpolate(
                 [
                   posR.posX.interpolate((x) => `translateX(${x}px)`),
