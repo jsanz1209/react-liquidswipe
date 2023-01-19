@@ -10,18 +10,20 @@ export default function LiquidSwipe({ components, index, onChangeIndex, style }:
   const parentElement = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    onChangeIndex(isActive);
-    setElm(
-      <Page
-        key={isActive}
-        index={isActive}
-        prev={components[isActive - 1] || null}
-        current={components[isActive]}
-        next={components[isActive + 1] || null}
-        setActive={setActive}
-        parentElement={parentElement} />
-    );
-  }, [isActive, components]);
+    if (index === isActive) {
+      onChangeIndex(isActive);
+      setElm(
+        <Page
+          key={isActive}
+          index={isActive}
+          prev={components[isActive - 1] || null}
+          current={components[isActive]}
+          next={components[isActive + 1] || null}
+          setActive={setActive}
+          parentElement={parentElement} />
+      );
+    }
+  }, [isActive, index, components]);
   
    useEffect(() => {
      if (index !== isActive) {
