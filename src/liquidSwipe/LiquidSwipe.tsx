@@ -10,7 +10,7 @@ export default function LiquidSwipe({ components, onChangeIndex, style }: { comp
   const parentElement = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    onChangeIndex(index);
+    onChangeIndex(isActive);
     setElm(
       <Page
         key={isActive}
