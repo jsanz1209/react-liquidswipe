@@ -3,9 +3,9 @@ import { useRef, useState, useEffect, FC } from 'react';
 import Page from './Page';
 import { LQSW_CONTAINER } from './Styled';
 
-export default function LiquidSwipe({ components, onChangeIndex, style }: { components: FC[], onChangeIndex: (index: number) => void, style?: any }): ReactElement {
+export default function LiquidSwipe({ components, index, onChangeIndex, style }: { components: FC[], index:number, onChangeIndex: (index: number) => void, style?: any }): ReactElement {
   const sizeOfSwipe = components.length;
-  const [isActive, setActive] = useState(0);
+  const [isActive, setActive] = useState(() => index);
   const [elm, setElm] = useState<ReactElement>();
   const parentElement = useRef<HTMLDivElement>(null);
 
