@@ -12,6 +12,7 @@ export default function LiquidSwipe({ components, index, onChangeIndex, style }:
   useEffect(() => {
     if (index === isActive) {
       onChangeIndex(isActive);
+    }
       setElm(
         <Page
           key={isActive}
@@ -22,7 +23,6 @@ export default function LiquidSwipe({ components, index, onChangeIndex, style }:
           setActive={setActive}
           parentElement={parentElement} />
       );
-    }
   }, [isActive, index, components]);
   
    useEffect(() => {
