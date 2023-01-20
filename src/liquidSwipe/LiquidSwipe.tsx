@@ -21,7 +21,7 @@ export default function LiquidSwipe({ components, index, onChangeIndex, style }:
           setActive={setActive}
           parentElement={parentElement} />
       );
-  }, [isActive, index, components]);
+  }, [isActive, components]);
   
    useEffect(() => {
       setActive(index);
